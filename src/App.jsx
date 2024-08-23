@@ -18,7 +18,7 @@ import { Summer } from "./pages/summer/Summer";
 import { MobileAccessories } from "./pages/MobileAccessories/MobileAccessories";
 import { WomensBags } from "./pages/WomensBags/WomensBags";
 import { SignUp } from "./pages/LoginSettings/SignUp";
-import { Login } from "./pages/LoginSettings/login";
+import { Login } from "./pages/LoginSettings/Login";
 import { ForgetPassword } from "./pages/LoginSettings/ForgetPassword";
 import { Require } from "./context/require";
 import { CartItemsAll } from "./component/cart/CartItemsAll";
