@@ -1,6 +1,6 @@
 import React from "react";
 import "../../style/component/MainFooter/MainFooter.css";
-import { FirstFooter } from "./firstFooter";
+import { FirstFooter } from "./FirstFooter";
 import { SecondFooter } from "./SecondFooter";
 import { CobyRight } from "./CobyRight";
 
