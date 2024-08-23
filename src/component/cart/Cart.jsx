@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { clear } from "../../rtk/slices/cart-slice";
 export const Cart = () => {
   const cart = useSelector((state) => state.cart.cartItems);
-  console.log(cart);
 
   const dispatch = useDispatch();
   const { activeCart, setActiveCart } = useContext(AddToCartContext);

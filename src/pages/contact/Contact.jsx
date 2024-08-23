@@ -1,6 +1,9 @@
 import React from "react";
 import "./../../style/component/about/contact.css";
 export const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <div className="contact">
@@ -26,7 +29,7 @@ export const Contact = () => {
               </p>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <label for="name" class="form-label">
                   Your Name (required)
                 </label>
@@ -62,7 +65,12 @@ export const Contact = () => {
                   id="exampleFormControlTextarea1"
                   rows="6"
                 ></textarea>
-                <button className="btn btn-outline-secondary mt-3">Supmit</button>
+                <button
+                  type="submit"
+                  className="btn btn-outline-secondary mt-3"
+                >
+                  Submit
+                </button>
               </form>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 mt-3">
