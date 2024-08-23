@@ -20,7 +20,7 @@ import { WomensBags } from "./pages/WomensBags/WomensBags";
 import { SignUp } from "./pages/LoginSettings/SignUp";
 import { Login } from "./pages/LoginSettings/Login";
 import { ForgetPassword } from "./pages/LoginSettings/ForgetPassword";
-import { Require } from "./context/require";
+import { Require } from "./context/Require";
 import { CartItemsAll } from "./component/cart/CartItemsAll";
 
 function App() {
