@@ -27,11 +27,7 @@ function App() {
   const routing = createBrowserRouter([
     {
       path: "/",
-      element: (
-        // <Require>
-        <Layout />
-        // </Require>
-      ),
+      element: <Layout />,
       children: [
         {
           index: true,

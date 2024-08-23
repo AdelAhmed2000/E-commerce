@@ -1,8 +1,8 @@
 import React from "react";
 import "../../style/component/MainFooter/MainFooter.css";
-import { FirstFooter } from "./FirstFooter";
 import { SecondFooter } from "./SecondFooter";
 import { CobyRight } from "./CobyRight";
+import { FirstFooter } from "./FirstFooter";
 
 export const Footer = () => {
   return (
