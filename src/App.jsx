@@ -11,7 +11,7 @@ import { About } from "./pages/about/About";
 import { Contact } from "./pages/contact/Contact";
 import { SingelItem } from "./pages/singelProduct/SingelItem";
 import { Toaster } from "react-hot-toast";
-import { Cart } from "./component/Cart/Cart";
+import { Cart } from "./component/cart/Cart";
 import { Favorite } from "./pages/favorite/Favorite";
 import ScrollToTop from "./component/scrollToTop/ScrollToTop";
 import { Summer } from "./pages/summer/Summer";
