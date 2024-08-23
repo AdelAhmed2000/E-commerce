@@ -1,7 +1,7 @@
 import React from "react";
 import "../../style/component/MainFooter/MainFooter.css";
 
-export const FirstFooter = () => {
+export const FooterTwo = () => {
   return (
     <>
       <div className="row">
