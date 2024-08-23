@@ -1,0 +1,249 @@
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1420px;
+  }
+}
+.homePage {
+  min-height: 100vh;
+}
+.pageTitle h1 {
+  font-size: 38px;
+  color: #484f56;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+/* Start Search  */
+.parent {
+  padding: 100px;
+  position: relative;
+  background-image: url(../../image/homepage/hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+.parent .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #0000002e;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+.parent .search_header {
+  color: #fff;
+}
+.parent .search .search_header p {
+  margin-bottom: 0;
+}
+.parent .search .search_header h2 {
+  font-size: 70px;
+  letter-spacing: 2.5px;
+  margin: 2px 0;
+}
+.parent .search .search_header b {
+  font-size: 17px;
+}
+.search_real {
+  margin-top: 40px;
+}
+.search_real .form-control {
+  position: relative;
+  padding: 0 0;
+}
+.search_real .form-control input {
+  position: relative;
+  padding: 8px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+.form-control:focus {
+  outline: none;
+  border-color: #79554870;
+  box-shadow: none;
+}
+.search_real .form-control .icon {
+  position: absolute;
+  right: 22px;
+  top: 4px;
+  font-size: 22px;
+  color: #6d757e;
+}
+.parent .search .shop_now {
+  position: relative;
+  width: fit-content;
+}
+.parent .search .shop_now a {
+  font-size: 14px;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 50px 8px 8px;
+  display: inline-block;
+}
+.parent .search .shop_now a::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 1px;
+  background-color: #fff;
+  right: 12px;
+  top: 18px;
+  transition: 0.5s;
+}
+.parent .search .shop_now a:hover::after {
+  width: 22px;
+}
+.categories {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 100px;
+}
+
+.categories .left {
+  position: relative;
+  z-index: 0;
+  background-image: url(/src/image/homepage/home1.png);
+  background-size: cover;
+  width: 33.33%;
+  padding: 80px 0 35px 25px;
+  color: #fff;
+  margin-top: 100px;
+}
+.categories .left .overlay,
+.categories .center .content .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #000000a3;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+.categories button {
+  border-radius: 0;
+  font-size: 13px;
+}
+.categories h5 {
+  margin: 30px 0;
+}
+.categories .line {
+  position: relative;
+  font-size: 12px;
+}
+.categories .line::after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 1px;
+  background-color: #fff;
+  top: 50%;
+  margin-left: 10px;
+}
+.categories .center {
+  position: relative;
+  width: 33.33%;
+  margin-top: 40px;
+}
+.categories .center::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 8px;
+  background-color: #414141;
+  right: 60px;
+  bottom: 70px;
+}
+.categories .center .content {
+  background-image: url("../../image/homepage/home2.jpg");
+  position: relative;
+  z-index: 0;
+  background-size: cover;
+  padding: 80px 0px 45px 25px;
+  color: #fff;
+}
+.categories .center .social {
+  cursor: pointer;
+  display: flex;
+  font-size: 27px;
+  gap: 8px;
+  width: fit-content;
+  color: #fff;
+  padding: 20px 0;
+}
+.categories .center .social .ins {
+  background-color: #ea0b14;
+  padding: 32px;
+}
+.categories .center .social .fac {
+  background-color: #3b5998;
+  padding: 32px;
+}
+.categories .right {
+  width: 33.33%;
+  color: #fff;
+  margin-bottom: 60px;
+}
+.categories .right .top {
+  background: #414141;
+  padding: 21px;
+  margin-bottom: 15px;
+}
+.categories .right .top span {
+  background-color: #919191;
+  height: 7px;
+  display: block;
+  width: 50px;
+  margin: 20px 0;
+}
+.categories .right p {
+  font-size: 13px;
+}
+.categories .right h6 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.categories .right .bottom {
+  background: #da291c;
+  padding: 21px;
+}
+/* Start Search  */
+/* Media */
+@media (max-width: 990px) {
+  .parent {
+    background-position: 50% 43%;
+    padding: 40px;
+  }
+  .parent .search .search_header h2 {
+    font-size: 45px;
+  }
+  .parent .search .search_header b {
+    font-size: 15px;
+  }
+  .parent .search .search_header p {
+    font-size: 14px;
+  }
+  .categories {
+    flex-direction: column;
+    align-items: center;
+  }
+  .categories .left {
+    width: 100%;
+    margin-top: 0;
+  }
+  .categories .center {
+    width: 100%;
+    margin-top: 0;
+  }
+  .categories .right {
+    width: 100%;
+    margin-top: 0;
+  }
+  .search_real .form-control .icon {
+    top: -1px;
+  }
+  .search_real .form-control input {
+    font-size: 14px;
+  }
+}
+/* Media */

@@ -1,0 +1,80 @@
+.categorySec {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.d-end-category {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background-size: cover;
+  padding: 0px 40px 35px 0px;
+  position: relative;
+  cursor: pointer;
+}
+
+.t-shirts {
+  background-image: url(/src/image/category/t-shirts.png);
+  background-size: cover;
+  background-position: 0% 0%;
+  min-height: 550px;
+}
+a {
+  position: relative;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+.d-end-category .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000054;
+  inset: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+.one-side {
+  background-image: url("../../../image/category/shirts.png");
+  min-height: 290px;
+}
+.two-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:1rem
+}
+.jeans {
+  background-image: url("../../../image/category/jeans.png");
+  min-height: 240px;
+  width: 50%;
+  justify-content: left;
+  padding-left: 25px;
+  margin-right: 20px;
+}
+.shose {
+  background-image: url("../../../image/category/shose.jpg");
+  background-position: bottom;
+  min-height: 240px;
+  width: 50%;
+  justify-content: left;
+  padding-left: 25px;
+}
+a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 28px;
+  height: 2px;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+.d-end-category:hover a::before,
+.d-end-category:hover .overlay {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+  opacity: 1;
+}

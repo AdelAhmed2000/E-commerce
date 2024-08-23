@@ -1,0 +1,15 @@
+.exclusive_title {
+  margin-bottom: 30px;
+}
+.exclusive_title h1 {
+  color: red;
+  font-weight: bold;
+}
+.exclusive_title span {
+  color: #22262a;
+  background-color: #eaedf0;
+  padding: 10px;
+}
+.exclusive img {
+  width: 100%;
+}

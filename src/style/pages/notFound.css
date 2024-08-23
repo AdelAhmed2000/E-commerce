@@ -1,0 +1,12 @@
+.not-found {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ min-height: 100vh
+}
+.not-found .text {
+  text-align: center;
+}
+.not-found .text h2 {
+margin-bottom: 2rem;
+}

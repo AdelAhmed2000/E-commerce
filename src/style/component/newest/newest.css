@@ -1,0 +1,30 @@
+.newest {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.newest_title {
+  margin-bottom: 50px;
+}
+.newest_title p {
+  font-size: 32px;
+  font-weight: 300;
+  color: red;
+  letter-spacing: -2px;
+  margin-bottom: 0;
+}
+.newest_title h1 {
+  color: #484f56;
+  margin-bottom: 0;
+  letter-spacing: -4px;
+  font-size: 74px;
+  font-weight: bold;
+}
+/* Media */
+@media (max-width: 724px) {
+  .newest_title h1 {
+    font-size: 50px;
+  }
+  .newest_title p {
+    font-size: 25px;
+  }
+}

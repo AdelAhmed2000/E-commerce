@@ -1,0 +1,66 @@
+.favParent {
+  background-color: #f8f8f8;
+  padding: 70px 0;
+}
+.favoriteSingle {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  transition: 0.5s;
+  height: 100%;
+}
+.favoriteSingle:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.favoriteImage {
+  background-color: #fff;
+  position: relative;
+}
+.favoriteImage img {
+  width: 100%;
+}
+.favoriteImage .close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 17px;
+  margin: 0 -10px;
+  visibility: hidden;
+  cursor: pointer;
+}
+.favoriteSingle:hover .favoriteImage .close {
+  visibility: visible;
+}
+.favoriteDescription {
+  padding: 20px;
+}
+.favoritePrice .btnAddToCart {
+  color: #484f56;
+  font-size: 15px;
+  position: relative;
+  border: 0;
+  padding: 5px;
+}
+/* Media */
+@media (max-width: 900px) {
+  .favoriteDetalisHeader h6 {
+    font-size: 15px;
+  }
+  .favoritePriceItem {
+    font-size: 13px;
+  }
+}
+@media (max-width: 761px) {
+  .favoriteSingle {
+    width: 60%;
+    margin: auto;
+  }
+  .favoriteDetalisHeader h6 {
+    font-size: 13px;
+  }
+}
+@media (max-width: 500px) {
+  .favoriteSingle {
+    width: 77%;
+    margin: auto;
+  }
+}

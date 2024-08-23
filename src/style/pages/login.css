@@ -1,0 +1,14 @@
+.auth {
+  padding: 20px;
+  margin: 60px auto;
+  border: 1px solid #34333311;
+  font-size: 14px;
+}
+.font {
+  font-size: 13px;
+}
+.textColor {
+  font-size: 16px;
+  color: #000;
+  text-decoration: underline;
+}

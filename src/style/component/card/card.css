@@ -1,0 +1,94 @@
+.card {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  transition: 0.5s;
+  height: 100%;
+}
+.card-image img {
+  width: 100%;
+  height: 35vh;
+}
+.card-body {
+  padding: 15px 10px;
+}
+.card-body h4 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.card-option a {
+  font-size: 14px;
+  color: #484f56;
+  margin-right: 20px;
+}
+.heart {
+  font-size: 14px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.card-option {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.card-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.card-price .badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #cf2929;
+  border-radius: 0;
+  padding: 6px;
+}
+.card-price span {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+.card-option a {
+  position: relative;
+}
+.card-option a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  top: 20px;
+  right: 0;
+  background-color: #484f56;
+  transform-origin: bottom left;
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+}
+.card-option a:hover::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+.card:hover .card-option {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card:hover .card-price {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+@media (max-width: 761px) {
+  .card {
+    width: 80%;
+    margin: auto;
+  }
+}
+.card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}

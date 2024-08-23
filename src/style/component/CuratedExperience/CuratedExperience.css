@@ -1,0 +1,91 @@
+.experience {
+  padding-top: 50px;
+}
+.experience_title {
+  margin-bottom: 50px;
+}
+.experience_title p {
+  font-size: 22px;
+  font-weight: 300;
+  color: red;
+  margin-bottom: 0;
+}
+.experience_title h1 {
+  font-size: 54px;
+  font-weight: 800;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.experience_title h2 {
+  font-size: 40px;
+  font-weight: normal;
+  color: #000;
+  margin-bottom: 0;
+}
+.experience_cat {
+    padding-bottom: 50px;
+}
+.width_overflow {
+  width: 25%;
+  overflow: hidden;
+}
+.experience_cat .cat_image {
+  position: relative;
+  transition: all 0.3s ease;
+}
+.experience_cat .cat_image img {
+  border-radius: 5px;
+  width: 100%;
+  height: 400px;
+  transition: 0.3s ease;
+}
+.cat_image_info {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 75px 0;
+}
+.cat_image_info_h2 {
+  font-size: 22px;
+  transform: rotate(-90deg);
+  transition: 0.3s ease;
+}
+.image_info_hover {
+  transition: 0.3s ease;
+  opacity: 0;
+  transform: rotate(90deg);
+}
+.image_info_hover_h2 {
+  font-size: 22px;
+}
+.cat_image:hover .image_info_hover {
+  opacity: 1;
+}
+.cat_image:hover .cat_image_info_h2 {
+  opacity: 0;
+}
+.width_overflow:hover .cat_image img {
+  transform: scale(1.03);
+}
+@media (max-width: 990px) {
+}
+@media (max-width: 724px) {
+  .experience_title h1 {
+    font-size: 50px;
+    font-weight: 500;
+  }
+  .experience_title h2 {
+    font-size: 30px;
+  }
+  .experience_cat {
+    flex-direction: column;
+  }
+  .width_overflow {
+    width: 100%;
+  }
+}

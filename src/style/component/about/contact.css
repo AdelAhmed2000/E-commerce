@@ -1,0 +1,27 @@
+.contact {
+  background-color: #f8f8f8;
+  color: #484f56;
+  padding: 100px 0;
+}
+.conTitle {
+  padding: 40px;
+}
+.conTitle h3 {
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.conTitle h1 {
+  font-weight: bold;
+}
+.contact form label {
+  margin: 10px 10px;
+}
+.contact form .form-control {
+  width: 85%;
+}
+.contact .backColor {
+  text-align: center;
+  background-color: #f2f2f2;
+  height: 100%;
+  padding-top: 35px;
+}

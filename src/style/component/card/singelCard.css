@@ -1,0 +1,114 @@
+.singelItem .itemImage img {
+  width: 100%;
+}
+.singelItem .bg {
+  background-color: #f3f3f3;
+}
+.itemDetails {
+  padding: 25px;
+}
+.itemDetails h5 {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.itemDetails h1 {
+  font-size: 40px;
+  color: #484f56;
+}
+.itemDetails h3 {
+  font-size: 20px;
+  color: #cf2929;
+}
+.itemDetails p {
+  color: #484f56;
+}
+.itemDetails h4 {
+  background-color: #fff;
+  width: fit-content;
+  color: #484f56;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+.itemDetails .addToCart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemDetails .btnAddToCart {
+  color: #484f56;
+  font-size: 15px;
+  position: relative;
+  border: 0;
+}
+.itemDetails .btnAddToCart::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #484f56;
+  transform-origin: bottom left;
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+}
+.itemDetails .btnAddToCart:hover::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+.itemDetails .btnAddToCart .btnQuantity {
+  background-color: transparent;
+  border: 1px solid #000;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemDetails .btnQuantity #quabtity {
+  background-color: transparent;
+  border: 0;
+  text-align: center;
+}
+.itemDetails .btnQuantity #quabtity:focus {
+  outline: 0;
+}
+.btnQuantity {
+  padding: 5px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+.btnQuantity span {
+  font-size: 20px;
+}
+.itemInfo {
+  padding: 25px;
+}
+.itemInfo-ul p {
+  font-size: 10px;
+  font-weight: bold;
+}
+.itemInfo-share span {
+  font-size: 12px;
+}
+.itemInfo-share svg {
+  margin: 5px;
+  font-size: 15px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* Media */
+@media (max-width: 824px) {
+  .itemDetails h1 {
+    font-size: 30px;
+  }
+}
