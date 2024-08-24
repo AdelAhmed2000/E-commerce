@@ -18,7 +18,7 @@ export const CartItemsAll = () => {
     return acc;
   }, 0);
   return (
-    <div className="cart-container">
+    <div className="cart-container margin_top">
       <h2>Shopping Cart</h2>
       {cart.cartItems.length === 0 ? (
         <div className="cart-empty">
@@ -66,7 +66,9 @@ export const CartItemsAll = () => {
                       </button>
                     </div>
                   </div>
-                  <div className="cart-product-price">Price ${cartItem.price}</div>
+                  <div className="cart-product-price">
+                    Price ${cartItem.price}
+                  </div>
                   <div className="cart-product-quantity">
                     <button onClick={() => dispatch(decreaseCart(cartItem))}>
                       -
@@ -77,7 +79,7 @@ export const CartItemsAll = () => {
                     </button>
                   </div>
                   <div className="cart-product-total-price">
-                    Total  ${cartItem.price * cartItem.quantity}
+                    Total ${cartItem.price * cartItem.quantity}
                   </div>
                 </div>
               ))}
