@@ -5,9 +5,9 @@ import { SingleCart } from "./SingleCart";
 import { useDispatch, useSelector } from "react-redux";
 import { clear } from "../../rtk/slices/cart-slice";
 import { GrClose } from "react-icons/gr";
+import { Link } from "react-router-dom";
 export const Cart = () => {
   const cart = useSelector((state) => state.cart.cartItems);
-
   const dispatch = useDispatch();
   const { activeCart, setActiveCart } = useContext(AddToCartContext);
 
@@ -34,12 +34,12 @@ export const Cart = () => {
                 ))}
               </div>
               <div className="CompletePayment">
-                <a
-                  href={"/cartItemsAll"}
+                <Link
+                  to={"/cartItemsAll"}
                   className="btn btn-primary w-100 rounded-4 mt-2 mb-2"
                 >
                   Complete the payment
-                </a>
+                </Link>
               </div>
               <div className="clear">
                 <button

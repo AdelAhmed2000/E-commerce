@@ -60,7 +60,6 @@ function App() {
   return (
     <main>
       <Toaster position="top-right" reverseOrder={false} />
-      <Cart />
       <ScrollToTop />
       <RouterProvider router={routing} />
     </main>
