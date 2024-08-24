@@ -4,6 +4,7 @@ import { AddToCartContext } from "../../context/AddToCartContext";
 import { SingleCart } from "./SingleCart";
 import { useDispatch, useSelector } from "react-redux";
 import { clear } from "../../rtk/slices/cart-slice";
+import { GrClose } from "react-icons/gr";
 export const Cart = () => {
   const cart = useSelector((state) => state.cart.cartItems);
 
@@ -21,7 +22,9 @@ export const Cart = () => {
         <div className="cart">
           <div className="cartHeader">
             <span>Cart Item {cart.length}</span>
-            <span onClick={() => setActiveCart(false)}>Close</span>
+            <span onClick={() => setActiveCart(false)}>
+              <GrClose />
+            </span>
           </div>
           {cart.length > 0 ? (
             <>

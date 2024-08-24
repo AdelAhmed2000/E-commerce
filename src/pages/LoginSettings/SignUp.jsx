@@ -75,7 +75,7 @@ export const SignUp = () => {
               </div>
               <button
                 type="submit"
-                class="btn btn-primary mb-3 w-100 font"
+                class="paddingButton btn btn-primary mb-3 w-100 font"
                 disabled={loading}
               >
                 SignUp

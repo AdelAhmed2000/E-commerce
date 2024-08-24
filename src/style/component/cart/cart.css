@@ -274,7 +274,7 @@
   }
   .CompletePayment a {
     font-size: 13px;
-  } 
+  }
   .clear button {
     font-size: 13px;
   }
@@ -326,6 +326,9 @@
   .cart-container .titles {
     display: none;
     margin-top: 30px;
+  }
+  .cartContainer {
+    height: 80rem;
   }
 }
 @media (max-width: 524px) {

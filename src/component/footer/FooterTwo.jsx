@@ -4,8 +4,8 @@ import "../../style/component/MainFooter/MainFooter.css";
 export const FooterTwo = () => {
   return (
     <>
-      <div className="row">
-        <div className="col">
+      <div className="row justify-content-center">
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <ul>
             <li className="bold">FREE DELIVERY</li>
             <li>
@@ -15,14 +15,14 @@ export const FooterTwo = () => {
             <li>Yes, we ship to Egypt!</li>
           </ul>
         </div>
-        <div className="col">
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <ul>
             <li className="bold">14 DAYS RETURNS</li>
             <li>You have 14 days to change your mind and return the item.</li>
             <li>No questions asked!</li>
           </ul>
         </div>
-        <div className="col">
+        <div className="col-lg-3 col-md-6 col-sm-12">
           <ul>
             <li className="bold">GIFT CARD</li>
             <li>

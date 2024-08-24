@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import "../../style/component/cart/cart.css";
 import { VscClose } from "react-icons/vsc";
 import {
