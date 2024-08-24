@@ -1,5 +1,6 @@
 import React from "react";
 import "../../style/component/categorysSection/categorysSection.css";
+import { Link } from "react-router-dom";
 export const CategorysSection = () => {
   return (
     <>
@@ -9,22 +10,22 @@ export const CategorysSection = () => {
             <div className="col-lg-6 col-md-6 col-sm-12 mt-3">
               <div className="t-shirts d-end-category">
                 <div className="overlay"></div>
-                <a href="#">T-SHIRTS</a>
+                <Link to={"/trending"}>T-SHIRTS</Link>
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 mt-3">
               <div className="one-side d-end-category">
                 <div className="overlay"></div>
-                <a href="#">SHIRTS</a>
+                <Link to={"/sale"}>SALE</Link>
               </div>
               <div className="two-side">
                 <div className="jeans d-end-category">
                   <div className="overlay"></div>
-                  <a href="#">JEANS</a>
+                  <Link to={"/MobileAccessories"}>MOBILE ACCESS</Link>
                 </div>
                 <div className="shose d-end-category">
                   <div className="overlay"></div>
-                  <a href="#">SHOSE</a>
+                  <Link to={"/winter"}>SHOSE</Link>
                 </div>
               </div>
             </div>
