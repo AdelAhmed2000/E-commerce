@@ -61,7 +61,9 @@ function App() {
   ]);
   return (
     <main>
-      <Toaster position="top-right" reverseOrder={false} />
+      <div className="toaster">
+        <Toaster position="top-right" reverseOrder={false} />
+      </div>
       <ScrollToTop />
       <RouterProvider router={routing} />
     </main>

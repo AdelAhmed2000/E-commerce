@@ -258,6 +258,9 @@
   .cartItem .cart {
     width: 60%;
   }
+  .cartItem .cart h4 {
+    font-size: 17px;
+  }
   .cartSingle {
     flex-direction: column;
     align-items: center;

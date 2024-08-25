@@ -13,3 +13,8 @@
 .exclusive img {
   width: 100%;
 }
+@media (max-width: 724px) {
+  .exclusive img {
+    height: 170px;
+  }
+}

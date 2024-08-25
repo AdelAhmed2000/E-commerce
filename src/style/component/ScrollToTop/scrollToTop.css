@@ -15,8 +15,6 @@
   width: 35px;
   color: #fff;
   cursor: pointer;
-  animation: movebtn 3s ease-in-out infinite;
-  transition: all 0.5s ease-in-out;
   padding: 4px;
 }
 .icon-style:hover {
@@ -24,23 +22,6 @@
   background: #fff;
   color: #272c31;
   border: 2px solid #272c31;
-}
-@keyframes movebtn {
-  0% {
-    transform: translateY(0px);
-  }
-  25% {
-    transform: translateY(20px);
-  }
-  50% {
-    transform: translateY(0px);
-  }
-  75% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
 
 .modal {

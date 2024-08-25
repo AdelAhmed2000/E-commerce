@@ -24,7 +24,7 @@
   margin-bottom: 0;
 }
 .experience_cat {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 .width_overflow {
   width: 25%;
@@ -72,8 +72,6 @@
 .width_overflow:hover .cat_image img {
   transform: scale(1.03);
 }
-@media (max-width: 990px) {
-}
 @media (max-width: 724px) {
   .experience_title h1 {
     font-size: 50px;
@@ -87,5 +85,9 @@
   }
   .width_overflow {
     width: 100%;
+  }
+  .experience_cat .cat_image {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }

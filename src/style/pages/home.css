@@ -173,11 +173,15 @@
 }
 .categories .center .social .ins {
   background-color: #ea0b14;
-  padding: 32px;
+  padding: 15px 25px;
+  width: 77px;
+  height: 77px;
 }
 .categories .center .social .fac {
   background-color: #3b5998;
-  padding: 32px;
+  padding: 15px 25px;
+  width: 77px;
+  height: 77px;
 }
 .categories .right {
   width: 33.33%;
@@ -209,6 +213,7 @@
 }
 /* Start Search  */
 /* Media */
+
 @media (max-width: 990px) {
   .parent {
     background-position: 50% 43%;
@@ -244,6 +249,27 @@
   }
   .search_real .form-control input {
     font-size: 14px;
+  }
+  .categories .center .social .fac,
+  .categories .center .social .ins {
+    padding: 10px 19px;
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+  }
+  .categories .center::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 8px;
+    background-color: #919191;
+    right: 80px;
+    bottom: 48px;
+  }
+}
+@media (max-width: 390px) {
+  .categories .center::after {
+    right: 35px;
   }
 }
 /* Media */

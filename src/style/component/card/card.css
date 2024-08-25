@@ -87,6 +87,9 @@
     width: 80%;
     margin: auto;
   }
+  .card-price .badge {
+    font-size: 10px;
+  }
 }
 .card:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
