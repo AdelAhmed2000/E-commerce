@@ -312,6 +312,11 @@
   .cart-item .cart-product-quantity {
     margin: auto;
     font-size: 12px;
+    justify-content: space-between;
+    padding: 3px;
+  }
+  .cart-checkout button {
+    font-size: 14px;
   }
   .cart-item .cart-product-total-price {
     text-align: end;

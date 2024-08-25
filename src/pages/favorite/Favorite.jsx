@@ -12,8 +12,8 @@ export const Favorite = () => {
   return (
     <>
       {favItem.length > 0 ? (
-        <div className="favParent">
-          <div className="container">
+        <div className="favParent pb-5">
+          <div className="container pb-5">
             <div className="title">
               <h1 className="mb-5">Wishlist</h1>
             </div>
