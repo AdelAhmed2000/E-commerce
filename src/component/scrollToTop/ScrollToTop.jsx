@@ -27,8 +27,6 @@ const ScrollToTop = () => {
             className="icon-position icon-style"
             onClick={goToTop}
           />
-
-          // <FaAngleUp  />
         )}
       </div>
     </>
