@@ -22,6 +22,8 @@ import { ForgetPassword } from "./pages/LoginSettings/ForgetPassword";
 import { Require } from "./context/Require";
 import { CartItemsAll } from "./component/cart/CartItemsAll";
 import { Trending } from "./component/Trending/Trending";
+import { ProductList } from "./admin/product/ProductList";
+import { CreateProduct } from "./admin/CreateProduct";
 
 function App() {
   const routing = createBrowserRouter([
@@ -55,6 +57,8 @@ function App() {
         { path: "/cartItemsAll", element: <CartItemsAll /> },
         { path: "/trending", element: <Trending /> },
         { path: "*", element: <NotFound /> },
+        { path: "/admin/products", element: <ProductList /> },
+        { path: "/admin/products/creatrProduct", element: <CreateProduct /> },
       ],
     },
   ]);

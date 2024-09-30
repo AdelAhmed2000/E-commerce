@@ -7,7 +7,7 @@ import { addToCart, addToFav } from "../../../rtk/slices/cart-slice";
 export const Card = ({ data, badge, dispatch }) => {
   return (
     <>
-      <div className="col-lg-3 col-md-6 col-sm-12 mt-3" key={data.id}>
+      <div className="col-lg-3 col-md-6 col-sm-6 mt-3" key={data.id}>
         <div className="card border-0">
           <div className="container">
             <div className="card-image">
@@ -26,7 +26,10 @@ export const Card = ({ data, badge, dispatch }) => {
                 <Link to={`/SingelItem/${data.category}/${data.id}`}>
                   QUICKVIEW
                 </Link>
-                <FaRegHeart className="heart" onClick={() => dispatch(addToFav(data))} />
+                <FaRegHeart
+                  className="heart"
+                  onClick={() => dispatch(addToFav(data))}
+                />
               </div>
             </div>
           </div>

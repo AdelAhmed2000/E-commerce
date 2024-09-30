@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Nike Air Jordan 1 Red And Black",
+      "brand": "iphone",
+      "description": "ADEL AHMED SAYED favorite among sneaker enthusiasts and athletes.",
+      "category": "mens-shoes",
+      "image": "1.jpg",
+      "price": 149.99
+    },
+    {
+      "id": "2",
+      "title": "ADSD Air Jordan 1 Red And Blackasdasdasd",
+      "brand": "mac",
+      "description": "The Nike Air Jord,S,S,S,S,S,ASDASDAS is an iconi… favorite among sneaker enthusiasts and athletes.",
+      "category": "mens-shoes",
+      "image": "2.jpg",
+      "price": 149.99
+    },
+    {
+      "id": "3",
+      "title": "D,,LLSS ASD Jordan 1 Red And Black",
+      "brand": "IOS",
+      "description": "ASMASMSAMSAMSM 1 in Red and Black is an iconi… favorite among sneaker enthusiasts and athletes.",
+      "category": "mens-shoes",
+      "image": "3.jpg",
+      "price": 149.99
+    },
+    {
+      "id": "562b",
+      "title": "Adel",
+      "brand": "IOS",
+      "category": "Winter",
+      "price": "22450",
+      "description": "AS Beuotfil brand",
+      "file": {}
+    },
+    {
+      "id": "73d8",
+      "title": "slsaklL",
+      "brand": "KKLSDL",
+      "category": "PhoneAccess",
+      "price": "03334",
+      "description": "MDMM",
+      "file": {}
+    }
+  ]
+}

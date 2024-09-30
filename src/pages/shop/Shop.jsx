@@ -12,6 +12,8 @@ export const Shop = () => {
     dispatch(fetchProducts("products"));
     setloading(false);
   }, []);
+  console.log(allProducts);
+
   if (loading) {
     return <span className="loader"></span>;
   }
