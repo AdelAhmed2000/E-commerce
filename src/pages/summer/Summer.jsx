@@ -5,27 +5,6 @@ import { Card } from "../../component/common/card/Card";
 
 export const Summer = () => {
   const [loading, setloading] = useState(true);
-
-  // const allProducts = async () => {
-  //   try {
-  //     const res = await axiosConfig({
-  //       url: "/products/category/tablets",
-  //       method: "get",
-  //       timeout: 10000,
-  //     });
-  //     console.log(res);
-  //     if (res.status === 200) {
-  //       setAllProduct(res.data.products);
-  //     }
-  //   } catch (err) {
-  //     console.log(err);
-  //   } finally {
-  //     setloading(false);
-  //   }
-  // };
-  // useEffect(() => {
-  //   allProducts();
-  // }, []);
   const allProducts = useSelector((state) => state.products);
   const dispatch = useDispatch();
   useEffect(() => {

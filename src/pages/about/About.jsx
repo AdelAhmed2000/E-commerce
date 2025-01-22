@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import text from "../../image/newFashion/signature.svg";
 import "../../style/component/about/about.css";
-
+import { collection, onSnapshot } from "firebase/firestore";
+import { db } from "../../api/data/firebase";
 export const About = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(collection(db, "products"), (snapshot) => {
+      const productList = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setProducts(productList);
+    });
+
+    return () => unsubscribe(); // Clean up the listener
+  }, []);
+  console.log(products);
+
   return (
     <div className="about margin_top">
       <div className="container">

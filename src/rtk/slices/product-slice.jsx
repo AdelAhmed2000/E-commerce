@@ -1,34 +1,74 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { db } from "../../api/data/firebase";
+import toast from "react-hot-toast";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 export const fetchProducts = createAsyncThunk(
   "productsSlice/fetchProducts",
-  async (items) => {
+  async (category) => {
     try {
-      const res = await axios.get(`https://dummyjson.com/${items}`);
-      return res.data.products;
+      // إعداد المجموعة
+      const productsCollection = collection(db, "products");
+      let q;
+
+      // إذا تم تمرير كاتجوري، أضف شرط where
+      if (category) {
+        q = query(productsCollection, where("category", "==", category));
+      } else {
+        // إذا لم يتم تمرير كاتجوري، اجلب كل البيانات
+        q = query(productsCollection);
+      }
+
+      // تنفيذ الكويري
+      const querySnapshot = await getDocs(q);
+
+      // التحقق من النتيجة
+      if (querySnapshot.empty) {
+        console.warn("No documents found for the given query.");
+      }
+
+      // تحويل البيانات إلى مصفوفة
+      const products = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      console.log("Fetched products:", products); // للمراجعة
+      return products;
     } catch (err) {
-      toast.error(err);
+      console.error("Error fetching products:", err);
+      throw err;
     }
   }
 );
-export const fetchProducts2 = createAsyncThunk(
-  "productsSlice/fetchProducts2",
-  async () => {
-    try {
-      const res = await axios.get(
-        "https://dummyjson.com/products/category/mens-shoes"
-      );
-      return res.data.products;
-    } catch (err) {
-      toast.error(err);
-    }
-  }
-);
+
+// export const fetchProducts = createAsyncThunk(
+//   "productsSlice/fetchProducts",
+//   async (items) => {
+//     try {
+//       const res = await axios.get(`https://dummyjson.com/${items}`);
+//       return res.data.products;
+//     } catch (err) {
+//       toast.error(err);
+//     }
+//   }
+// );
+// export const fetchProducts2 = createAsyncThunk(
+//   "productsSlice/fetchProducts2",
+//   async () => {
+//     try {
+//       const res = await axios.get(
+//         "https://dummyjson.com/products/category/mens-shoes"
+//       );
+//       return res.data.products;
+//     } catch (err) {
+//       toast.error(err);
+//     }
+//   }
+// );
 const productsSlice = createSlice({
   initialState: {
     products: [],
-    products2: [],
   },
   name: "productsSlice",
   reducers: {},
@@ -36,9 +76,9 @@ const productsSlice = createSlice({
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
       state.products = action.payload;
     });
-    builder.addCase(fetchProducts2.fulfilled, (state, action) => {
-      state.products2 = action.payload;
-    });
+    // builder.addCase(fetchProducts2.fulfilled, (state, action) => {
+    //   state.products2 = action.payload;
+    // });
   },
 });
 

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import "../../style/component/cart/cart.css";
 import { AddToCartContext } from "../../context/AddToCartContext";
 import { SingleCart } from "./SingleCart";
@@ -6,20 +6,39 @@ import { useDispatch, useSelector } from "react-redux";
 import { clear } from "../../rtk/slices/cart-slice";
 import { GrClose } from "react-icons/gr";
 import { Link } from "react-router-dom";
+
 export const Cart = () => {
   const cart = useSelector((state) => state.cart.cartItems);
   const dispatch = useDispatch();
   const { activeCart, setActiveCart } = useContext(AddToCartContext);
+
+  const cartRef = useRef(null);
 
   const totalPrice = cart.reduce((acc, product) => {
     acc += product.price * product.quantity;
     return acc;
   }, 0);
 
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (cartRef.current && !cartRef.current.contains(e.target)) {
+        setActiveCart(false);
+      }
+    };
+
+    if (activeCart) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [activeCart, setActiveCart]);
+
   return (
     <>
-      <div className={` cartItem ${!activeCart ? "activeCart" : ""}`}>
-        <div className="cart">
+      <div className={`cartItem ${!activeCart ? "activeCart" : ""}`}>
+        <div className="cart" ref={cartRef}>
           <div className="cartHeader">
             <span>Cart Item {cart.length}</span>
             <span onClick={() => setActiveCart(false)}>

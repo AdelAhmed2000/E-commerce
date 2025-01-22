@@ -12,7 +12,7 @@ export const SingleCart = ({ data, dispatch }) => {
     <>
       <div className="cartSingle">
         <div className="cartImage">
-          <img src={data.images[0]} alt={"image"} />
+          <img src={data.img} alt={data.id} />
         </div>
         <div className="cartDescription">
           <div className="cartDetalisHeader">

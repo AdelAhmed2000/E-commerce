@@ -22,8 +22,7 @@ import { ForgetPassword } from "./pages/LoginSettings/ForgetPassword";
 import { Require } from "./context/Require";
 import { CartItemsAll } from "./component/cart/CartItemsAll";
 import { Trending } from "./component/Trending/Trending";
-import { ProductList } from "./admin/product/ProductList";
-import { CreateProduct } from "./admin/CreateProduct";
+import ProductList from "./pages/ProductList";
 
 function App() {
   const routing = createBrowserRouter([
@@ -53,12 +52,11 @@ function App() {
         { path: "/login", element: <Login /> },
         { path: "/signUp", element: <SignUp /> },
         { path: "/forgotPassword", element: <ForgetPassword /> },
-        { path: "/SingelItem/:category/:id", element: <SingelItem /> },
+        { path: "/SingelItem/:id", element: <SingelItem /> },
         { path: "/cartItemsAll", element: <CartItemsAll /> },
         { path: "/trending", element: <Trending /> },
+        { path: "/productList", element: <ProductList /> },
         { path: "*", element: <NotFound /> },
-        { path: "/admin/products", element: <ProductList /> },
-        { path: "/admin/products/creatrProduct", element: <CreateProduct /> },
       ],
     },
   ]);

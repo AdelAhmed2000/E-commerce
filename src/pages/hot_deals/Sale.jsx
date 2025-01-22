@@ -48,7 +48,7 @@ export const Sale = () => {
               <Card
                 dispatch={dispatch}
                 data={data}
-                badge={"-60% OFF"}
+                badge={"-50% OFF"}
                 key={data.id}
               />
             ))}

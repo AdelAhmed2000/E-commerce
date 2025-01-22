@@ -8,12 +8,15 @@ export const Winter = () => {
   const allProducts = useSelector((state) => state.products);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchProducts("products/category/mens-shoes"));
+    dispatch(fetchProducts("winter"));
+
     setloading(false);
   }, []);
   if (loading) {
     return <span className="loader"></span>;
   }
+  console.log(allProducts);
+
   return (
     <>
       <div className="winter margin_top">

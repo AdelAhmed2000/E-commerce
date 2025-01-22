@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../../style/component/card/singelCard.css";
 import {
   FaFacebook,
@@ -8,9 +8,36 @@ import {
 } from "react-icons/fa6";
 import { LiaSmsSolid } from "react-icons/lia";
 import { FcLink } from "react-icons/fc";
-import { addToCart, decreaseCart } from "../../rtk/slices/cart-slice";
+import { addToCart } from "../../rtk/slices/cart-slice";
+import { useParams } from "react-router-dom";
+import { db } from "../../api/data/firebase";
+import { doc, getDoc } from "firebase/firestore";
 
 export const SingelCard = ({ data, cat, dispatch }) => {
+  const productId = useParams();
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const productRef = doc(db, "products", productId.id);
+        const productSnap = await getDoc(productRef);
+
+        if (productSnap.exists()) {
+          setProduct({ id: productId.id, ...productSnap.data() });
+        } else {
+          console.log("No such product!");
+        }
+      } catch (error) {
+        console.error("Error fetching product:", error);
+      }
+    };
+
+    fetchProduct();
+  }, [productId.id]);
+
+  if (!product) return <div>Loading...</div>;
+
   return (
     <>
       <div className="singelItem">
@@ -18,23 +45,25 @@ export const SingelCard = ({ data, cat, dispatch }) => {
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-12">
               <div className="itemImage">
-                <img src={data.images[0]} width={300} alt="image" />
+                <img src={product.img} width={300} alt={product.id} />
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 bg">
               <div className="itemDetails">
-                <h5>{cat.id + " > " + cat.category} </h5>
-                <h1>{data.title}</h1>
-                <h3>{data.price} $</h3>
-                <p>{data.description}</p>
-                <p>Rating : {data.rating}</p>
+                <h5>{product.id + " > " + product.category} </h5>
+                <h1>{product.title}</h1>
+                <h3>{product.price} $</h3>
+                <p>{product.description}</p>
+                <p>Rating : {product.rating}</p>
                 <h4>
-                  {data.brand === undefined ? "" : "Brand Name : " + data.brand}
+                  {product.brand === undefined
+                    ? "New Product"
+                    : "Brand Name : " + product.brand}
                 </h4>
                 <div className="addToCart">
                   <button
                     className="btnAddToCart"
-                    onClick={() => dispatch(addToCart(data))}
+                    onClick={() => dispatch(addToCart(product))}
                   >
                     Add To Cart
                   </button>
@@ -44,7 +73,7 @@ export const SingelCard = ({ data, cat, dispatch }) => {
                 <div className="itemInfo-ul">
                   <p>
                     SKU: 1400149 <br />
-                    Categories: , {cat.category}
+                    Categories: , {product.category}
                     <br />
                     Tags: coup, men, shoes, trendy
                   </p>
