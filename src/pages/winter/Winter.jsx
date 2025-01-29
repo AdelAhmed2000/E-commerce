@@ -15,7 +15,6 @@ export const Winter = () => {
   if (loading) {
     return <span className="loader"></span>;
   }
-  console.log(allProducts);
 
   return (
     <>

@@ -48,15 +48,13 @@ export const cartSlice = createSlice({
 
       if (state.cartItems[itemIndex].quantity > 1) {
         state.cartItems[itemIndex].quantity -= 1;
-        // toast.info("Decreased product quantity");
+        toast.success("Decreased product quantity");
       } else if (state.cartItems[itemIndex].quantity === 1) {
         const nextCartItems = state.cartItems.filter(
           (item) => item.id !== action.payload.id
         );
-
         state.cartItems = nextCartItems;
-
-        // toast.error("Product removed from cart");
+        toast.error("Product removed from cart");
       }
 
       localStorage.setItem("cartItem", JSON.stringify(state.cartItems));
@@ -71,8 +69,10 @@ export const cartSlice = createSlice({
       const findProduct = state.favItem.find(
         (product) => product.id === action.payload.id
       );
+
       if (findProduct) {
         findProduct.quantity += 1;
+        toast.success("Quantity updated in Favorite");
       } else {
         const productClone = { ...action.payload, quantity: 1 };
         state.favItem.push(productClone);
@@ -80,6 +80,7 @@ export const cartSlice = createSlice({
       }
       localStorage.setItem("favItem", JSON.stringify(state.favItem));
     },
+
     deleteFromFav: (state, action) => {
       state.favItem.map((favItem) => {
         if (favItem.id === action.payload.id) {

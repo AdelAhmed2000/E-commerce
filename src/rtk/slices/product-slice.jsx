@@ -42,30 +42,6 @@ export const fetchProducts = createAsyncThunk(
   }
 );
 
-// export const fetchProducts = createAsyncThunk(
-//   "productsSlice/fetchProducts",
-//   async (items) => {
-//     try {
-//       const res = await axios.get(`https://dummyjson.com/${items}`);
-//       return res.data.products;
-//     } catch (err) {
-//       toast.error(err);
-//     }
-//   }
-// );
-// export const fetchProducts2 = createAsyncThunk(
-//   "productsSlice/fetchProducts2",
-//   async () => {
-//     try {
-//       const res = await axios.get(
-//         "https://dummyjson.com/products/category/mens-shoes"
-//       );
-//       return res.data.products;
-//     } catch (err) {
-//       toast.error(err);
-//     }
-//   }
-// );
 const productsSlice = createSlice({
   initialState: {
     products: [],

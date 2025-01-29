@@ -9,11 +9,9 @@ export const Shop = () => {
   const allProducts = useSelector((state) => state.products);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchProducts("products"));
+    dispatch(fetchProducts());
     setloading(false);
   }, []);
-  console.log(allProducts);
-
   if (loading) {
     return <span className="loader"></span>;
   }

@@ -22,7 +22,6 @@ import { ForgetPassword } from "./pages/LoginSettings/ForgetPassword";
 import { Require } from "./context/Require";
 import { CartItemsAll } from "./component/cart/CartItemsAll";
 import { Trending } from "./component/Trending/Trending";
-import ProductList from "./pages/ProductList";
 
 function App() {
   const routing = createBrowserRouter([
@@ -38,7 +37,14 @@ function App() {
             </Require>
           ),
         },
-        { path: "/summer", element: <Summer /> },
+        {
+          path: "/summer",
+          element: (
+            <Require>
+              <Summer />
+            </Require>
+          ),
+        },
         { path: "/shop", element: <Shop /> },
         { path: "/winter", element: <Winter /> },
         { path: "/WomensBags", element: <WomensBags /> },
@@ -55,7 +61,6 @@ function App() {
         { path: "/SingelItem/:id", element: <SingelItem /> },
         { path: "/cartItemsAll", element: <CartItemsAll /> },
         { path: "/trending", element: <Trending /> },
-        { path: "/productList", element: <ProductList /> },
         { path: "*", element: <NotFound /> },
       ],
     },

@@ -7,7 +7,7 @@ import { addToCart, deleteFromFav } from "../../rtk/slices/cart-slice";
 
 export const Favorite = () => {
   const favItem = useSelector((state) => state.cart.favItem);
-
+  console.log(favItem);
   const dispatch = useDispatch();
   return (
     <>
@@ -22,7 +22,7 @@ export const Favorite = () => {
                 <div className="col-lg-3 col-md-6 col-sm-12 mt-3" key={data.id}>
                   <div className="favoriteSingle">
                     <div className="favoriteImage">
-                      <img src={data.images[0]} alt={"image"} />
+                      <img src={data.img} alt={"image"} />
                       <VscClose
                         className="close"
                         onClick={() => dispatch(deleteFromFav(data))}
