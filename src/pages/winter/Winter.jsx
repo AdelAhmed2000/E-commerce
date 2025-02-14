@@ -9,7 +9,7 @@ export const Winter = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProducts("winter"));
-
+    
     setloading(false);
   }, []);
   if (loading) {

@@ -8,10 +8,10 @@ export const Summer = () => {
   const allProducts = useSelector((state) => state.products);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchProducts("products/category/tablets"));
+    dispatch(fetchProducts("summer"));
+
     setloading(false);
   }, []);
-
   if (loading) {
     return <span className="loader"></span>;
   }

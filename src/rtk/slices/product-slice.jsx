@@ -7,32 +7,50 @@ export const fetchProducts = createAsyncThunk(
   "productsSlice/fetchProducts",
   async (category) => {
     try {
-      // إعداد المجموعة
       const productsCollection = collection(db, "products");
       let q;
-
-      // إذا تم تمرير كاتجوري، أضف شرط where
       if (category) {
         q = query(productsCollection, where("category", "==", category));
       } else {
         // إذا لم يتم تمرير كاتجوري، اجلب كل البيانات
         q = query(productsCollection);
       }
-
-      // تنفيذ الكويري
       const querySnapshot = await getDocs(q);
-
-      // التحقق من النتيجة
       if (querySnapshot.empty) {
         console.warn("No documents found for the given query.");
       }
-
-      // تحويل البيانات إلى مصفوفة
       const products = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
-
+      console.log("Fetched products:", products); // للمراجعة
+      return products;
+    } catch (err) {
+      console.error("Error fetching products:", err);
+      throw err;
+    }
+  }
+);
+export const fetchProducts2 = createAsyncThunk(
+  "productsSlice/fetchProducts2",
+  async (category) => {
+    try {
+      const productsCollection = collection(db, "products");
+      let q;
+      if (category) {
+        q = query(productsCollection, where("category", "==", category));
+      } else {
+        // إذا لم يتم تمرير كاتجوري، اجلب كل البيانات
+        q = query(productsCollection);
+      }
+      const querySnapshot = await getDocs(q);
+      if (querySnapshot.empty) {
+        console.warn("No documents found for the given query.");
+      }
+      const products = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
       console.log("Fetched products:", products); // للمراجعة
       return products;
     } catch (err) {
@@ -45,6 +63,7 @@ export const fetchProducts = createAsyncThunk(
 const productsSlice = createSlice({
   initialState: {
     products: [],
+    products2: [],
   },
   name: "productsSlice",
   reducers: {},
@@ -52,9 +71,9 @@ const productsSlice = createSlice({
     builder.addCase(fetchProducts.fulfilled, (state, action) => {
       state.products = action.payload;
     });
-    // builder.addCase(fetchProducts2.fulfilled, (state, action) => {
-    //   state.products2 = action.payload;
-    // });
+    builder.addCase(fetchProducts2.fulfilled, (state, action) => {
+      state.products2 = action.payload;
+    });
   },
 });
 

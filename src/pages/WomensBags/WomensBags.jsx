@@ -8,10 +8,9 @@ export const WomensBags = () => {
   const allProducts = useSelector((state) => state.products);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchProducts("products/category/womens-bags"));
+    dispatch(fetchProducts("womensBags"));
     setloading(false);
   }, []);
-
   if (loading) {
     return <span className="loader"></span>;
   }
